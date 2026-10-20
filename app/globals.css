@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+/* Core Pre-installed Document Fonts */
+@import "@fontsource/roboto/400.css";
+@import "@fontsource/roboto/700.css";
+@import "@fontsource/roboto/400-italic.css";
+@import "@fontsource/open-sans/400.css";
+@import "@fontsource/open-sans/700.css";
+@import "@fontsource/montserrat/400.css";
+@import "@fontsource/montserrat/700.css";
+@import "@fontsource/lato/400.css";
+@import "@fontsource/lato/700.css";
+@import "@fontsource/poppins/400.css";
+@import "@fontsource/poppins/700.css";
+@import "@fontsource/merriweather/400.css";
+@import "@fontsource/merriweather/700.css";
+@import "@fontsource/playfair-display/400.css";
+@import "@fontsource/playfair-display/700.css";
+@import "@fontsource/lora/400.css";
+@import "@fontsource/lora/700.css";
+@import "@fontsource/fira-code/400.css";
+@import "@fontsource/fira-code/700.css";
+@import "@fontsource/roboto-mono/400.css";
+@import "@fontsource/roboto-mono/700.css";
+
+@theme {
+  --color-filora: #5003C0;
+  --color-filora-50: #FAF7FF;
+  --color-filora-100: #F3EDFF;
+  --color-filora-200: #E6DAFE;
+  --color-filora-300: #CEB5FC;
+  --color-filora-400: #A97CFA;
+  --color-filora-500: #7E3FF2;
+  --color-filora-600: #5003C0;
+  --color-filora-700: #4202A1;
+  --color-filora-800: #34027F;
+  --color-filora-900: #27025F;
+  --color-filora-950: #17003B;
+
+  --color-surface: #FFFFFF;
+  --color-surface-subtle: #F8F7FB;
+  --color-surface-muted: #F3F2F8;
+  --color-surface-border: #EAEAEA;
+}
+
+@layer base {
+  :root {
+    --filora-primary: #5003C0;
+    --filora-primary-hover: #4202A1;
+    --filora-primary-light: #F3EDFF;
+    --filora-background: #FFFFFF;
+    --filora-surface: #F8F7FB;
+    --filora-border: #EAEAEA;
+    --filora-text: #000000;
+    --filora-text-muted: #4B5563;
+    --filora-subtle: #8A8A8A;
+  }
+
+  body {
+    background-color: var(--filora-background);
+    color: var(--filora-text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Custom scrollbar for preview trays */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F8F7FB;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4D4D4;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #5003C0;
+}
+
+.pdf-canvas-container {
+  box-shadow: 0 10px 30px rgba(80, 3, 192, 0.07);
+}
+
+.pdf-page-shadow {
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.1), 0 2px 6px -1px rgba(0, 0, 0, 0.06);
+}
