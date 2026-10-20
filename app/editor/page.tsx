@@ -487,6 +487,7 @@ export default function EditorPage() {
               onUpdateExtractedText={handleUpdateExtractedText}
               onDeleteExtractedText={handleDeleteExtractedText}
               onOpenSignatureModal={() => setIsSignatureModalOpen(true)}
+              onExportPdf={() => setIsPreviewOpen(true)}
             />
 
             {/* Right Properties Inspector */}

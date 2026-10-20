@@ -4,7 +4,7 @@ import { useState, useRef, useEffect, useCallback } from "react";
 import { EditorTool } from "./EditorSidebar";
 import { ExtractedTextItem } from "@/lib/pdf-engine/pdf-render";
 import { getFontFamilyCss } from "@/lib/pdf-engine/font-manager";
-import { Trash2, GripVertical, Minimize2, Move } from "lucide-react";
+import { Trash2, GripVertical, Minimize2, Move, Sparkles, Download, ArrowRight } from "lucide-react";
 import { ResizeHandles, ResizeDirection } from "./ResizeHandles";
 
 /**
@@ -77,6 +77,7 @@ interface EditorCanvasProps {
   onUpdateExtractedText: (id: string, updates: Partial<ExtractedTextItem>, addToHistory?: boolean) => void;
   onDeleteExtractedText: (id: string) => void;
   onOpenSignatureModal: () => void;
+  onExportPdf?: () => void;
 }
 
 export function EditorCanvas({
@@ -100,6 +101,7 @@ export function EditorCanvas({
   onUpdateExtractedText,
   onDeleteExtractedText,
   onOpenSignatureModal,
+  onExportPdf,
 }: EditorCanvasProps) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [isDrawing, setIsDrawing] = useState(false);
@@ -433,6 +435,44 @@ export function EditorCanvas({
       className="flex-1 bg-surface-subtle overflow-auto p-6 sm:p-10 flex flex-col items-center select-none"
       style={{ minHeight: 0 }}
     >
+      {/* Highlighted Notice Above Current Editing Page */}
+      <div
+        className="mb-4 shrink-0 transition-all select-none"
+        style={{
+          width: `${612 * zoom}px`,
+          maxWidth: "100%",
+        }}
+      >
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 px-4 py-2.5 bg-gradient-to-r from-amber-50 via-filora-50/60 to-amber-50/80 border border-amber-200/90 rounded-2xl shadow-xs text-neutral-800">
+          <div className="flex items-center gap-2.5">
+            <div className="w-7 h-7 rounded-xl bg-amber-500/10 border border-amber-300 text-amber-700 flex items-center justify-center shrink-0 shadow-2xs">
+              <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+            </div>
+            <div className="text-xs leading-relaxed text-neutral-800">
+              <span className="font-bold text-amber-900">Notice: </span>
+              <span>For the final preview, press the </span>
+              <span className="inline-flex items-center gap-1 font-bold text-filora bg-white px-2 py-0.5 rounded-lg border border-filora-200 shadow-2xs mx-0.5">
+                <Download className="w-3 h-3 text-filora" />
+                Export PDF
+              </span>
+              <span> button for final result.</span>
+            </div>
+          </div>
+
+          {onExportPdf && (
+            <button
+              type="button"
+              onClick={onExportPdf}
+              className="shrink-0 px-3.5 py-1.5 bg-filora hover:bg-filora-700 active:bg-filora-800 text-white rounded-xl text-xs font-bold shadow-2xs transition-all flex items-center gap-1.5 cursor-pointer group"
+              title="Open final preview and export PDF"
+            >
+              <span>Export PDF</span>
+              <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+            </button>
+          )}
+        </div>
+      </div>
+
       {/* Sizing wrapper keeps the full document bounds scrollable and anchored without top cropping */}
       <div
         style={{
