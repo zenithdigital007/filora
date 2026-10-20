@@ -76,30 +76,30 @@ export default function HomePage() {
 
           {/* Heading */}
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-neutral-900 tracking-tight max-w-4xl mx-auto leading-[1.1] mb-6 font-display">
-            Free Online <span className="text-filora">PDF Tools</span>
+            Free Online PDF Tools & <span className="text-filora">Free PDF Editor</span>
           </h1>
 
           {/* Subheading */}
           <p className="text-base sm:text-xl text-neutral-600 max-w-2xl mx-auto leading-relaxed mb-8">
-            Edit, merge, split, compress, convert, sign and organize your documents with simple online tools.
+            The 100% free online PDF editor and document toolkit. Edit text directly, merge, split, compress, convert, sign, and organize documents with zero watermarks or signup.
           </p>
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 max-w-md mx-auto mb-10">
             <Link
-              href="/tools"
+              href="/editor"
               className="w-full sm:w-auto px-8 py-4 bg-filora hover:bg-filora-700 active:bg-filora-800 text-white rounded-2xl text-sm font-bold shadow-cardHover transition-all flex items-center justify-center gap-2 group"
             >
-              <span>Explore All Tools</span>
+              <Edit3 className="w-4 h-4" />
+              <span>Free PDF Editor</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
 
             <Link
-              href="/editor"
+              href="/tools"
               className="w-full sm:w-auto px-8 py-4 bg-white hover:bg-filora-50 active:bg-filora-100 text-filora border-2 border-filora rounded-2xl text-sm font-bold transition-all flex items-center justify-center gap-2"
             >
-              <Edit3 className="w-4 h-4" />
-              <span>Open PDF Editor</span>
+              <span>Explore 40+ Tools</span>
             </Link>
           </div>
 
@@ -337,7 +337,7 @@ export default function HomePage() {
               href="/editor"
               className="px-8 py-3.5 bg-filora-700 hover:bg-filora-800 text-white rounded-2xl text-sm font-bold border border-filora-400 transition-colors"
             >
-              Launch PDF Editor
+              Launch Free PDF Editor
             </Link>
           </div>
         </div>

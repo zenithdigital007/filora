@@ -18,32 +18,50 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Filora — Free Online PDF & Document Toolkit | Files, made effortless.",
+  title: "Filora — Free PDF Editor & Online Document Toolkit | Files, made effortless.",
   description:
-    "Edit, merge, split, compress, convert, sign, watermark, protect, and organize your PDF documents with simple online tools. Privacy-first, browser-powered processing.",
+    "100% Free Online PDF Editor and document productivity suite. Edit PDF text, merge, split, compress, convert, sign, watermark, protect, and organize PDFs right in your browser without watermarks or registration.",
   keywords: [
-    "PDF tools",
-    "merge PDF",
-    "compress PDF",
-    "PDF editor",
-    "sign PDF",
-    "split PDF",
-    "convert PDF",
+    "free PDF editor",
+    "free pdf editor online",
+    "edit PDF free",
+    "online PDF editor",
     "free PDF tools",
+    "merge PDF free",
+    "compress PDF free",
+    "sign PDF free",
+    "split PDF",
+    "PDF to Word",
+    "convert PDF free",
     "Filora",
   ],
   metadataBase: new URL("https://filora.app"),
+  alternates: {
+    canonical: "https://filora.app",
+  },
   openGraph: {
-    title: "Filora — Free Online PDF & Document Toolkit",
-    description: "Files, made effortless. Simple tools for every document.",
+    title: "Filora — Free PDF Editor & Online Document Toolkit",
+    description: "Files, made effortless. 100% Free Online PDF Editor and tools for every document.",
     url: "https://filora.app",
     siteName: "Filora",
     locale: "en_US",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Filora — Free PDF Editor & Online Document Toolkit",
+    description: "Free Online PDF Editor & complete document productivity suite.",
+  },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
@@ -52,9 +70,51 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://filora.app/#website",
+        url: "https://filora.app",
+        name: "Filora",
+        description: "Free Online PDF Editor & Document Processing Platform",
+        potentialAction: {
+          "@type": "SearchAction",
+          target: "https://filora.app/tools?q={search_term_string}",
+          "query-input": "required name=search_term_string",
+        },
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://filora.app/#organization",
+        name: "Filora",
+        url: "https://filora.app",
+        logo: "https://filora.app/icon",
+        sameAs: ["https://github.com/zenithdigital007/filora"],
+      },
+      {
+        "@type": "SoftwareApplication",
+        name: "Filora Free PDF Editor",
+        applicationCategory: "BusinessApplication",
+        operatingSystem: "All",
+        url: "https://filora.app/editor",
+        offers: {
+          "@type": "Offer",
+          price: "0",
+          priceCurrency: "USD",
+        },
+      },
+    ],
+  };
+
   return (
     <html lang="en" className={`${inter.variable} ${outfit.variable}`}>
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link

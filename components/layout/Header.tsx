@@ -124,7 +124,7 @@ export function Header() {
                   className="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold text-filora bg-filora-50 hover:bg-filora-100 rounded-lg transition-colors"
                 >
                   <Edit3 className="w-4 h-4 text-filora" />
-                  <span>PDF Editor</span>
+                  <span>Free PDF Editor</span>
                 </Link>
 
                 <Link
@@ -206,7 +206,7 @@ export function Header() {
               className="flex items-center gap-3 p-3 rounded-xl bg-filora-50 text-filora font-semibold text-sm"
             >
               <Edit3 className="w-5 h-5 text-filora" />
-              <span>Flagship PDF Editor</span>
+              <span>Free PDF Editor</span>
             </Link>
 
             <Link

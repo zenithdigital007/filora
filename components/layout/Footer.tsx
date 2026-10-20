@@ -47,7 +47,7 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/editor" className="text-neutral-600 hover:text-filora transition-colors">
-                  PDF Editor
+                  Free PDF Editor
                 </Link>
               </li>
               <li>
