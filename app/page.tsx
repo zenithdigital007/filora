@@ -23,6 +23,7 @@ import { FAQAccordion } from "@/components/common/FAQAccordion";
 import { FeedbackSection } from "@/components/common/FeedbackSection";
 import { TopContentAd, InContentAd, BottomContentAd } from "@/components/ads/AdBanners";
 import { GUIDES_DATA } from "@/lib/guides-data";
+import { generateFaqSchema } from "@/lib/seo-schema";
 
 export default function HomePage() {
   const popularSlugs = [
@@ -63,8 +64,16 @@ export default function HomePage() {
     }
   ];
 
+  const faqSchema = generateFaqSchema(homepageFaqs);
+
   return (
     <div className="space-y-20 pb-16">
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
       {/* 1. HERO SECTION */}
       <section className="relative overflow-hidden pt-12 sm:pt-20 pb-16 bg-gradient-to-b from-filora-50/60 via-white to-white border-b border-neutral-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -76,7 +85,7 @@ export default function HomePage() {
 
           {/* Heading */}
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-neutral-900 tracking-tight max-w-4xl mx-auto leading-[1.1] mb-6 font-display">
-            Free Online PDF Tools & <span className="text-filora">Free PDF Editor</span>
+            Online PDF Editor & <span className="text-filora">Free PDF Tools</span>
           </h1>
 
           {/* Subheading */}

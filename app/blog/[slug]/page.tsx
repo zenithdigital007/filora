@@ -1,8 +1,10 @@
 import { notFound } from "next/navigation";
 import { BLOG_POSTS, getBlogPostBySlug } from "@/lib/blog-data";
 import { Breadcrumbs } from "@/components/common/Breadcrumbs";
-import { TopContentAd, BottomContentAd, InContentAd } from "@/components/ads/AdBanners";
-import { Clock, Calendar, User, BookOpen } from "lucide-react";
+import { TopContentAd, BottomContentAd } from "@/components/ads/AdBanners";
+import { Clock, Calendar, User } from "lucide-react";
+import { getBaseUrl, SITE_CONFIG } from "@/lib/site-config";
+import { generateBreadcrumbSchema } from "@/lib/seo-schema";
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -19,17 +21,39 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: BlogPostPageProps) {
   const { slug } = await params;
   const post = getBlogPostBySlug(slug);
-  if (!post) return { title: "Post Not Found | Pdfyara" };
+  const baseUrl = getBaseUrl();
+
+  if (!post) return { title: "Post Not Found | PDFYARA" };
+
+  const postUrl = `${baseUrl}/blog/${post.slug}`;
 
   return {
-    title: `${post.title} | Pdfyara Engineering Blog`,
+    title: `${post.title} | PDFYARA Engineering Blog`,
     description: post.excerpt,
+    alternates: {
+      canonical: postUrl,
+    },
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      url: postUrl,
+      siteName: SITE_CONFIG.brandName,
+      type: "article",
+      images: ["/icon"],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: ["/icon"],
+    },
   };
 }
 
 export default async function SingleBlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params;
   const post = getBlogPostBySlug(slug);
+  const baseUrl = getBaseUrl();
 
   if (!post) notFound();
 
@@ -38,8 +62,45 @@ export default async function SingleBlogPostPage({ params }: BlogPostPageProps) 
     { label: post.title },
   ];
 
+  const postUrl = `${baseUrl}/blog/${post.slug}`;
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        headline: post.title,
+        description: post.excerpt,
+        datePublished: post.publishedAt,
+        dateModified: post.publishedAt,
+        mainEntityOfPage: postUrl,
+        author: {
+          "@type": "Organization",
+          name: post.author,
+        },
+        publisher: {
+          "@type": "Organization",
+          name: SITE_CONFIG.brandName,
+          logo: {
+            "@type": "ImageObject",
+            url: `${baseUrl}/icon`,
+          },
+        },
+      },
+      generateBreadcrumbSchema(baseUrl, [
+        { name: "Home", path: "/" },
+        { name: "Blog", path: "/blog" },
+        { name: post.title, path: `/blog/${post.slug}` },
+      ]),
+    ],
+  };
+
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Breadcrumbs items={breadcrumbItems} />
 
       <div className="space-y-4">

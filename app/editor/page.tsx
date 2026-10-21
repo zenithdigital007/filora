@@ -425,10 +425,10 @@ export default function EditorPage() {
               <div className="w-12 h-12 rounded-2xl bg-filora text-white font-black text-xl flex items-center justify-center mx-auto shadow-md">
                 P
               </div>
-              <h1 className="text-2xl font-black text-neutral-900">Pdfyara PDF Studio</h1>
+              <h1 className="text-2xl font-black text-neutral-900">Free PDF Editor Online — PDFYARA Studio</h1>
               <p className="text-xs sm:text-sm text-neutral-500">
-                Edit original PDF text with matching fonts, erase content, add signatures, shapes,
-                and stamps right in your browser.
+                100% Free Online PDF Editor. Edit original text with matching fonts, add annotations,
+                digital signatures, shapes, and stamps with zero watermarks.
               </p>
             </div>
 

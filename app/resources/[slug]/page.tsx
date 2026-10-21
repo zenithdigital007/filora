@@ -1,7 +1,9 @@
 import { notFound } from "next/navigation";
 import { RESOURCES_DATA, getResourceBySlug } from "@/lib/resources-data";
 import { Breadcrumbs } from "@/components/common/Breadcrumbs";
-import { TopContentAd, BottomContentAd, InContentAd } from "@/components/ads/AdBanners";
+import { TopContentAd, BottomContentAd } from "@/components/ads/AdBanners";
+import { getBaseUrl, SITE_CONFIG } from "@/lib/site-config";
+import { generateBreadcrumbSchema } from "@/lib/seo-schema";
 
 interface ResourcePageProps {
   params: Promise<{
@@ -18,17 +20,39 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: ResourcePageProps) {
   const { slug } = await params;
   const res = getResourceBySlug(slug);
-  if (!res) return { title: "Resource Not Found | Pdfyara" };
+  const baseUrl = getBaseUrl();
+
+  if (!res) return { title: "Resource Not Found | PDFYARA" };
+
+  const resUrl = `${baseUrl}/resources/${res.slug}`;
 
   return {
-    title: `${res.title} | Pdfyara Technical Reference`,
+    title: `${res.title} | PDFYARA Technical Reference`,
     description: res.summary,
+    alternates: {
+      canonical: resUrl,
+    },
+    openGraph: {
+      title: res.title,
+      description: res.summary,
+      url: resUrl,
+      siteName: SITE_CONFIG.brandName,
+      type: "article",
+      images: ["/icon"],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: res.title,
+      description: res.summary,
+      images: ["/icon"],
+    },
   };
 }
 
 export default async function SingleResourcePage({ params }: ResourcePageProps) {
   const { slug } = await params;
   const resource = getResourceBySlug(slug);
+  const baseUrl = getBaseUrl();
 
   if (!resource) notFound();
 
@@ -37,8 +61,43 @@ export default async function SingleResourcePage({ params }: ResourcePageProps) 
     { label: resource.title },
   ];
 
+  const resourceUrl = `${baseUrl}/resources/${resource.slug}`;
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "TechArticle",
+        headline: resource.title,
+        description: resource.summary,
+        mainEntityOfPage: resourceUrl,
+        author: {
+          "@type": "Organization",
+          name: `${SITE_CONFIG.brandName} Engineering Team`,
+        },
+        publisher: {
+          "@type": "Organization",
+          name: SITE_CONFIG.brandName,
+          logo: {
+            "@type": "ImageObject",
+            url: `${baseUrl}/icon`,
+          },
+        },
+      },
+      generateBreadcrumbSchema(baseUrl, [
+        { name: "Home", path: "/" },
+        { name: "Resources", path: "/resources" },
+        { name: resource.title, path: `/resources/${resource.slug}` },
+      ]),
+    ],
+  };
+
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Breadcrumbs items={breadcrumbItems} />
 
       <div className="space-y-4">

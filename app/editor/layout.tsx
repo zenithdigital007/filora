@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
+import { getBaseUrl, SITE_CONFIG } from "@/lib/site-config";
+import { generateBreadcrumbSchema, generateSoftwareApplicationSchema } from "@/lib/seo-schema";
+
+const baseUrl = getBaseUrl();
 
 export const metadata: Metadata = {
-  title: "Free PDF Editor Online — Edit PDF Text, Annotate & Sign PDF Free | Pdfyara",
+  title: "Free PDF Editor Online — Edit PDF Text, Annotate & Sign PDF Free",
   description:
     "100% Free Online PDF Editor. Edit original PDF text with exact font matching, add text annotations, digital signatures, drawings, shapes, and stamps directly in your browser. No watermarks, no sign-up required.",
   keywords: [
@@ -14,24 +18,26 @@ export const metadata: Metadata = {
     "sign pdf online free",
     "annotate pdf free",
     "best free pdf editor",
-    "Pdfyara PDF editor",
+    "pdfyara pdf editor",
   ],
   alternates: {
-    canonical: "https://filora.app/editor",
+    canonical: `${baseUrl}/editor`,
   },
   openGraph: {
-    title: "Free PDF Editor Online — Edit PDF Text, Annotate & Sign PDF Free",
+    title: "Free PDF Editor Online — Edit PDF Text, Annotate & Sign PDF Free | PDFYARA",
     description:
       "100% Free Online PDF Editor. Edit PDF text, draw, highlight, stamp, and electronically sign documents right in your browser.",
-    url: "https://filora.app/editor",
-    siteName: "Pdfyara",
+    url: `${baseUrl}/editor`,
+    siteName: SITE_CONFIG.brandName,
     type: "website",
+    images: ["/icon"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Free PDF Editor Online — Edit PDF Text, Annotate & Sign Free",
     description:
       "100% Free Online PDF Editor. Edit text, add shapes, signatures, and annotations directly in your browser without watermarks.",
+    images: ["/icon"],
   },
 };
 
@@ -40,29 +46,20 @@ export default function EditorLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const jsonLd = {
+  const currentBaseUrl = getBaseUrl();
+  const editorSchema = {
     "@context": "https://schema.org",
-    "@type": "WebApplication",
-    name: "Pdfyara Free PDF Editor",
-    alternateName: "Free PDF Editor Online",
-    description:
-      "100% Free Online PDF Editor. Edit original PDF text with font matching, add signatures, shapes, annotations, stamps, and watermarks without sign-up or watermarks.",
-    url: "https://filora.app/editor",
-    applicationCategory: "BusinessApplication",
-    operatingSystem: "All",
-    browserRequirements: "Requires modern web browser with HTML5 and WebAssembly support",
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "USD",
-    },
-    featureList: [
-      "Edit existing PDF text directly with matching fonts",
-      "Add digital signatures by drawing, typing, or uploading",
-      "Insert shapes, stamps, highlighters, and freehand drawings",
-      "Multi-directional textbox expand and collapse controls",
-      "100% client-side privacy protection with zero file uploads",
-      "High-resolution vector export without watermarks",
+    "@graph": [
+      generateSoftwareApplicationSchema(
+        currentBaseUrl,
+        "PDFYARA Free PDF Editor",
+        "/editor",
+        "100% Free Online PDF Editor. Edit original PDF text with font matching, add signatures, shapes, annotations, stamps, and watermarks without sign-up or watermarks."
+      ),
+      generateBreadcrumbSchema(currentBaseUrl, [
+        { name: "Home", path: "/" },
+        { name: "Free PDF Editor", path: "/editor" },
+      ]),
     ],
   };
 
@@ -70,7 +67,7 @@ export default function EditorLayout({
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(editorSchema) }}
       />
       {children}
     </>

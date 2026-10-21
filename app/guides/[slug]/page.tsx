@@ -17,6 +17,8 @@ import {
   ArrowRight,
   Sparkles
 } from "lucide-react";
+import { getBaseUrl, SITE_CONFIG } from "@/lib/site-config";
+import { generateBreadcrumbSchema, generateFaqSchema } from "@/lib/seo-schema";
 
 interface GuidePageProps {
   params: Promise<{
@@ -33,15 +35,31 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: GuidePageProps) {
   const { slug } = await params;
   const guide = getGuideBySlug(slug);
-  if (!guide) return { title: "Guide Not Found | Pdfyara" };
+  const baseUrl = getBaseUrl();
+
+  if (!guide) return { title: "Guide Not Found | PDFYARA" };
+
+  const guideUrl = `${baseUrl}/guides/${guide.slug}`;
 
   return {
-    title: `${guide.title} | Pdfyara Guide`,
+    title: `${guide.title} | PDFYARA Guide`,
     description: guide.summary,
+    alternates: {
+      canonical: guideUrl,
+    },
     openGraph: {
       title: guide.title,
       description: guide.summary,
-      url: `https://filora.app/guides/${guide.slug}`,
+      url: guideUrl,
+      siteName: SITE_CONFIG.brandName,
+      type: "article",
+      images: ["/icon"],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: guide.title,
+      description: guide.summary,
+      images: ["/icon"],
     },
   };
 }
@@ -49,6 +67,7 @@ export async function generateMetadata({ params }: GuidePageProps) {
 export default async function SingleGuidePage({ params }: GuidePageProps) {
   const { slug } = await params;
   const guide = getGuideBySlug(slug);
+  const baseUrl = getBaseUrl();
 
   if (!guide) notFound();
 
@@ -57,24 +76,45 @@ export default async function SingleGuidePage({ params }: GuidePageProps) {
     { label: guide.title },
   ];
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: guide.title,
-    description: guide.summary,
-    dateModified: guide.lastUpdated,
-    author: {
-      "@type": "Organization",
-      name: "Pdfyara Editorial Team",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "Pdfyara",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://filora.app/icon.png",
+  const guideUrl = `${baseUrl}/guides/${guide.slug}`;
+
+  const schemaGraph: any[] = [
+    {
+      "@type": "Article",
+      headline: guide.title,
+      description: guide.summary,
+      dateModified: guide.lastUpdated,
+      mainEntityOfPage: guideUrl,
+      author: {
+        "@type": "Organization",
+        name: `${SITE_CONFIG.brandName} Editorial Team`,
+      },
+      publisher: {
+        "@type": "Organization",
+        name: SITE_CONFIG.brandName,
+        logo: {
+          "@type": "ImageObject",
+          url: `${baseUrl}/icon`,
+        },
       },
     },
+    generateBreadcrumbSchema(baseUrl, [
+      { name: "Home", path: "/" },
+      { name: "Guides", path: "/guides" },
+      { name: guide.title, path: `/guides/${guide.slug}` },
+    ]),
+  ];
+
+  if (guide.content.faq && guide.content.faq.length > 0) {
+    const faqSchema = generateFaqSchema(
+      guide.content.faq.map((f) => ({ question: f.q, answer: f.a }))
+    );
+    if (faqSchema) schemaGraph.push(faqSchema);
+  }
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": schemaGraph,
   };
 
   return (

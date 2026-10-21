@@ -1619,6 +1619,91 @@ export const TOOLS_REGISTRY: ToolConfig[] = [
     ],
     relatedTools: ["fill-sign-pdf", "edit-pdf", "flatten-pdf"],
     relatedGuides: ["how-to-fill-a-pdf-form", "how-to-sign-a-pdf"]
+  },
+
+  // 37. SIGN PDF (DIRECT TOOL & SEO LANDING)
+  {
+    slug: "sign-pdf",
+    name: "Sign PDF Online Free",
+    category: "Edit & Sign",
+    description: "Sign PDF documents online with free electronic signatures. Draw, type, or upload your signature directly in your web browser.",
+    shortDesc: "Add electronic signatures to contracts and forms",
+    icon: "FileSignature",
+    route: "/tools/sign-pdf",
+    seoTitle: "Sign PDF Online Free — Electronic Signatures | PDFYARA",
+    seoDescription: "Sign PDF documents online for free. Create, draw, or type electronic signatures and sign contracts, waivers, and forms with 100% private in-browser processing.",
+    processingMode: "browser",
+    supportedFormats: ["PDF"],
+    badge: "Popular",
+    intro: "Signing PDF contracts, agreements, and forms shouldn't require printing and physical paper. PDFYARA's Sign PDF tool allows you to draw your signature, type with calligraphic typography, or upload a signature image and place it anywhere on your document.",
+    howToUse: [
+      { title: "Upload PDF", desc: "Select the PDF contract or document requiring signature." },
+      { title: "Create Your Signature", desc: "Draw your signature with touch/mouse, type your initials, or upload an image." },
+      { title: "Position & Download", desc: "Place the signature on the required line and download your signed document." }
+    ],
+    howItWorks: "Signatures are rendered as crisp vector layers and mathematically encoded directly into the PDF content stream in your browser.",
+    useCases: [
+      { title: "Real Estate & Leases", desc: "Sign rental agreements and lease contracts remotely." },
+      { title: "Freelance Proposals", desc: "Sign client estimates and non-disclosure agreements quickly." }
+    ],
+    bestPractices: [
+      "Use contrasting ink colors (dark blue or black) for maximum readability."
+    ],
+    commonMistakes: [
+      "Uploading low-resolution photos of paper signatures with dark shadowy backgrounds."
+    ],
+    limitations: [
+      "Electronic signatures provide visual signing; check statutory regulations for documents requiring cryptographic digital certificates."
+    ],
+    faq: [
+      { question: "Is my signature saved on your servers?", answer: "No. Your signature is drawn and rendered entirely within your browser session and never sent to external servers." },
+      { question: "Can I sign on mobile phones?", answer: "Yes, you can easily draw your signature using your finger or stylus on smartphones and tablets." }
+    ],
+    relatedTools: ["fill-sign-pdf", "edit-pdf", "protect-pdf"],
+    relatedGuides: ["how-to-sign-a-pdf", "how-to-fill-a-pdf-form"]
+  },
+
+  // 38. ADD TEXT TO PDF (DIRECT TOOL & SEO LANDING)
+  {
+    slug: "add-text-to-pdf",
+    name: "Add Text to PDF Online Free",
+    category: "Edit & Sign",
+    description: "Add text to PDF documents online for free. Type text boxes, customize fonts, colors, and line spacing without watermarks.",
+    shortDesc: "Type text annotations directly onto PDF pages",
+    icon: "FileText",
+    route: "/tools/add-text-to-pdf",
+    seoTitle: "Add Text to PDF Online Free — Type on PDF | PDFYARA",
+    seoDescription: "Add text to PDF documents online for free. Type anywhere on your PDF, choose matching fonts, colors, and sizes with 100% private in-browser editing.",
+    processingMode: "browser",
+    supportedFormats: ["PDF"],
+    badge: "Essential",
+    intro: "Need to fill out a paper form, add missing notes, insert labels, or type responses into a PDF? PDFYARA's Add Text to PDF tool gives you customizable text boxes with font matching, color pickers, and multi-directional collapse/expand controls.",
+    howToUse: [
+      { title: "Open Document", desc: "Upload the PDF document you want to add text to." },
+      { title: "Place Text Box", desc: "Click anywhere on the document canvas to insert a new text box." },
+      { title: "Type & Style", desc: "Type your text, adjust font family, font size, color, and line wrapping." },
+      { title: "Export PDF", desc: "Save your document with text baked cleanly into the PDF." }
+    ],
+    howItWorks: "Text annotations are rendered as interactive overlay blocks and burned into standard PDF font operators upon export.",
+    useCases: [
+      { title: "Filling Out Application Forms", desc: "Type answers directly onto scanned application forms and resumes." },
+      { title: "Document Review", desc: "Add reviewer comments, timestamps, and revision notes to drafts." }
+    ],
+    bestPractices: [
+      "Use zoom controls to align typed text exactly with the baseline of form lines."
+    ],
+    commonMistakes: [
+      "Using low-contrast font colors that are hard to read over document backgrounds."
+    ],
+    limitations: [
+      "Adding text creates an overlay; it does not reflow existing flattened background paragraphs."
+    ],
+    faq: [
+      { question: "Can I customize the font style and size?", answer: "Yes, you can choose from dozens of standard document fonts, adjust font sizes, weights, and colors." },
+      { question: "Does adding text alter original content?", answer: "No, original document vector paths and streams remain preserved; new text is cleanly layered." }
+    ],
+    relatedTools: ["edit-pdf", "fill-sign-pdf", "watermark-pdf"],
+    relatedGuides: ["how-to-edit-a-pdf", "how-to-fill-a-pdf-form"]
   }
 ];
 
