@@ -19,10 +19,10 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: BlogPostPageProps) {
   const { slug } = await params;
   const post = getBlogPostBySlug(slug);
-  if (!post) return { title: "Post Not Found | Filora" };
+  if (!post) return { title: "Post Not Found | Pdfyara" };
 
   return {
-    title: `${post.title} | Filora Engineering Blog`,
+    title: `${post.title} | Pdfyara Engineering Blog`,
     description: post.excerpt,
   };
 }

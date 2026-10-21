@@ -36,11 +36,11 @@ export function Header() {
             <div className="flex items-center gap-8">
               <Link href="/" className="flex items-center gap-2 group">
                 <div className="w-9 h-9 rounded-xl bg-filora flex items-center justify-center text-white font-black text-xl shadow-md group-hover:scale-105 transition-transform">
-                  F
+                  P
                 </div>
                 <div className="flex flex-col">
                   <span className="text-xl font-extrabold tracking-tight text-neutral-900 leading-none group-hover:text-filora transition-colors">
-                    FILORA
+                    PDFYARA
                   </span>
                   <span className="text-[10px] font-medium text-neutral-500 tracking-wider">
                     PDF TOOLKIT

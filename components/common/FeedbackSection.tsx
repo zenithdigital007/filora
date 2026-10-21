@@ -27,7 +27,7 @@ interface FeedbackSectionProps {
 export function FeedbackSection({
   recipientEmail = "raokamlesh2803@gmail.com",
   className = "",
-  title = "Have Advice or Queries for Filora?",
+  title = "Have Advice or Queries for Pdfyara?",
   subtitle = "Your feedback directly shapes our product. Send your questions, suggestions, or ideas for the betterment of the app directly to our developer team.",
 }: FeedbackSectionProps) {
   const [category, setCategory] = useState<"advice" | "query" | "tool_request" | "bug">("advice");
@@ -39,10 +39,10 @@ export function FeedbackSection({
   const [submitted, setSubmitted] = useState(false);
 
   const categories = [
-    { id: "advice", label: "App Advice & Ideas", icon: Lightbulb, defaultSubject: "Advice for the betterment of Filora" },
-    { id: "query", label: "General Query / Question", icon: HelpCircle, defaultSubject: "Query regarding Filora" },
-    { id: "tool_request", label: "Request a New Tool", icon: Wrench, defaultSubject: "New Tool Request for Filora" },
-    { id: "bug", label: "Report an Issue", icon: Bug, defaultSubject: "Bug Report for Filora" },
+    { id: "advice", label: "App Advice & Ideas", icon: Lightbulb, defaultSubject: "Advice for the betterment of Pdfyara" },
+    { id: "query", label: "General Query / Question", icon: HelpCircle, defaultSubject: "Query regarding Pdfyara" },
+    { id: "tool_request", label: "Request a New Tool", icon: Wrench, defaultSubject: "New Tool Request for Pdfyara" },
+    { id: "bug", label: "Report an Issue", icon: Bug, defaultSubject: "Bug Report for Pdfyara" },
   ] as const;
 
   const handleCopyEmail = async () => {
@@ -55,7 +55,7 @@ export function FeedbackSection({
     }
   };
 
-  const currentDefaultSubject = categories.find((c) => c.id === category)?.defaultSubject || "Feedback for Filora";
+  const currentDefaultSubject = categories.find((c) => c.id === category)?.defaultSubject || "Feedback for Pdfyara";
   const finalSubject = subject.trim() || currentDefaultSubject;
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -82,7 +82,7 @@ export function FeedbackSection({
       "--- Message / Advice ---",
       message,
       "",
-      "Sent from Filora Web App",
+      "Sent from Pdfyara Web App",
     ];
 
     const mailtoUrl = `mailto:${recipientEmail}?subject=${encodeURIComponent(
@@ -114,7 +114,7 @@ export function FeedbackSection({
             <div className="space-y-3">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-filora-200 text-filora text-xs font-bold shadow-2xs">
                 <Sparkles className="w-3.5 h-3.5 text-filora" />
-                <span>Help Us Improve Filora</span>
+                <span>Help Us Improve Pdfyara</span>
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-neutral-900 tracking-tight font-display">
                 {title}
@@ -140,7 +140,7 @@ export function FeedbackSection({
 
               <div className="flex items-center justify-between gap-2 p-2.5 rounded-xl bg-surface-subtle border border-neutral-200 text-xs">
                 <a
-                  href={`mailto:${recipientEmail}?subject=Filora%20Feedback`}
+                  href={`mailto:${recipientEmail}?subject=Pdfyara%20Feedback`}
                   className="font-mono font-semibold text-filora hover:underline truncate"
                   title="Click to compose email"
                 >
@@ -298,7 +298,7 @@ export function FeedbackSection({
                     rows={4}
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    placeholder="Tell us what you'd like to improve, any queries you have, or new features that would make Filora better for you..."
+                    placeholder="Tell us what you'd like to improve, any queries you have, or new features that would make Pdfyara better for you..."
                     className="w-full p-3.5 rounded-xl border border-neutral-300 focus:border-filora text-xs sm:text-sm outline-none transition-colors resize-y leading-relaxed"
                   />
                 </div>

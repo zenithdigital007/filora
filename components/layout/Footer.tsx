@@ -10,17 +10,17 @@ export function Footer() {
           <div className="lg:col-span-2 space-y-4">
             <Link href="/" className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-xl bg-filora flex items-center justify-center text-white font-extrabold text-lg">
-                F
+                P
               </div>
               <span className="text-xl font-extrabold tracking-tight text-neutral-900">
-                FILORA
+                PDFYARA
               </span>
             </Link>
             <p className="text-sm text-neutral-600 font-medium">
               Files, made effortless. Simple tools for every document.
             </p>
             <p className="text-xs text-neutral-500 max-w-sm leading-relaxed">
-              Filora is a privacy-conscious document productivity platform. Core operations run client-side in your web browser, keeping your sensitive documents secure.
+              Pdfyara is a privacy-conscious document productivity platform. Core operations run client-side in your web browser, keeping your sensitive documents secure.
             </p>
             <div className="flex items-center gap-4 pt-2 text-xs text-neutral-500">
               <div className="flex items-center gap-1.5">
@@ -125,7 +125,7 @@ export function Footer() {
             <ul className="space-y-2.5 text-sm">
               <li>
                 <Link href="/about" className="text-neutral-600 hover:text-filora transition-colors">
-                  About Filora
+                  About Pdfyara
                 </Link>
               </li>
               <li>
@@ -171,7 +171,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="pt-12 mt-12 border-t border-neutral-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-500">
           <div>
-            © 2026 Filora. All rights reserved. Files, made effortless.
+            © 2026 Pdfyara. All rights reserved. Files, made effortless.
           </div>
           <div className="flex items-center gap-6">
             <Link href="/privacy-policy" className="hover:text-filora">Privacy</Link>

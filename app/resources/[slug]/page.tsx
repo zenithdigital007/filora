@@ -18,10 +18,10 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: ResourcePageProps) {
   const { slug } = await params;
   const res = getResourceBySlug(slug);
-  if (!res) return { title: "Resource Not Found | Filora" };
+  if (!res) return { title: "Resource Not Found | Pdfyara" };
 
   return {
-    title: `${res.title} | Filora Technical Reference`,
+    title: `${res.title} | Pdfyara Technical Reference`,
     description: res.summary,
   };
 }

@@ -35,15 +35,15 @@ export default function ContactPage() {
           <div className="p-6 rounded-3xl bg-surface-subtle border border-neutral-200 space-y-2">
             <Mail className="w-5 h-5 text-filora" />
             <h3 className="text-sm font-bold text-neutral-900">Support Email</h3>
-            <p className="text-xs text-neutral-500">For general inquiries and bug reports:</p>
-            <span className="text-xs font-semibold text-filora block pt-1">support@filora.app</span>
+            <p className="text-xs text-neutral-500">For general inquiries and advice:</p>
+            <span className="text-xs font-semibold text-filora block pt-1">raokamlesh2803@gmail.com</span>
           </div>
 
           <div className="p-6 rounded-3xl bg-surface-subtle border border-neutral-200 space-y-2">
             <MessageSquare className="w-5 h-5 text-filora" />
-            <h3 className="text-sm font-bold text-neutral-900">Business Inquiries</h3>
-            <p className="text-xs text-neutral-500">For partnership & enterprise questions:</p>
-            <span className="text-xs font-semibold text-filora block pt-1">partnerships@filora.app</span>
+            <h3 className="text-sm font-bold text-neutral-900">App Queries & Advice</h3>
+            <p className="text-xs text-neutral-500">For ideas, tool requests & feedback:</p>
+            <span className="text-xs font-semibold text-filora block pt-1">raokamlesh2803@gmail.com</span>
           </div>
         </div>
 
@@ -95,7 +95,7 @@ export default function ContactPage() {
                   rows={5}
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  placeholder="How can we help improve Filora?"
+                  placeholder="How can we help improve Pdfyara?"
                   className="w-full p-4 rounded-xl border border-neutral-300 focus:border-filora text-sm outline-none"
                 />
               </div>

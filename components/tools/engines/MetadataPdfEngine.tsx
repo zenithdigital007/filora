@@ -19,7 +19,7 @@ export function MetadataPdfEngine() {
   const [author, setAuthor] = useState("");
   const [subject, setSubject] = useState("");
   const [keywords, setKeywords] = useState("");
-  const [creator, setCreator] = useState("Filora Document Toolkit");
+  const [creator, setCreator] = useState("Pdfyara Document Toolkit");
 
   const [status, setStatus] = useState<"idle" | "reading" | "processing" | "complete" | "error">("idle");
   const [progress, setProgress] = useState(0);

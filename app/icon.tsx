@@ -25,7 +25,7 @@ export default function Icon() {
           border: "12px solid rgba(255, 255, 255, 0.2)",
         }}
       >
-        F
+        P
       </div>
     ),
     {

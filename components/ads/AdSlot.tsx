@@ -38,9 +38,9 @@ export function AdSlot({ slotId = "placeholder", format = "horizontal", classNam
           </div>
         ) : (
           <div className="space-y-1">
-            <span className="font-medium text-neutral-400">Filora Sponsored Space</span>
+            <span className="font-medium text-neutral-400">Pdfyara Sponsored Space</span>
             <p className="text-[11px] text-neutral-400 max-w-xs">
-              Fast, privacy-friendly document tools powered by Filora
+              Fast, privacy-friendly document tools powered by Pdfyara
             </p>
           </div>
         )}

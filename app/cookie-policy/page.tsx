@@ -1,8 +1,8 @@
 import { Breadcrumbs } from "@/components/common/Breadcrumbs";
 
 export const metadata = {
-  title: "Cookie Policy | Filora",
-  description: "Understand how Filora uses cookies and local storage to deliver a seamless user experience.",
+  title: "Cookie Policy | Pdfyara",
+  description: "Understand how Pdfyara uses cookies and local storage to deliver a seamless user experience.",
 };
 
 export default function CookiePolicyPage() {
@@ -28,7 +28,7 @@ export default function CookiePolicyPage() {
         </section>
 
         <section className="space-y-2">
-          <h2 className="text-lg font-bold text-neutral-900">How Filora Uses Cookies & Local Storage</h2>
+          <h2 className="text-lg font-bold text-neutral-900">How Pdfyara Uses Cookies & Local Storage</h2>
           <p>
             We use <code>localStorage</code> to store your favorited tools and recent tool history directly on your computer so your workspace remains customized between sessions.
           </p>

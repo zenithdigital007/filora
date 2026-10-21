@@ -46,20 +46,20 @@ export default function HomePage() {
 
   const homepageFaqs = [
     {
-      question: "Are Filora's document tools free to use?",
-      answer: "Yes, Filora provides free access to standard document productivity tools—including merging, splitting, compressing, rotating, watermarking, electronic signing, and OCR—without mandatory accounts or paywalls."
+      question: "Are Pdfyara's document tools free to use?",
+      answer: "Yes, Pdfyara provides free access to standard document productivity tools—including merging, splitting, compressing, rotating, watermarking, electronic signing, and OCR—without mandatory accounts or paywalls."
     },
     {
-      question: "How does Filora protect my privacy and document data?",
-      answer: "For tools running client-side, Filora executes mathematical transformations directly in your browser using WebAssembly. Your documents are never uploaded to remote servers. Where server-side processing is required for complex conversions, files are handled in isolated stateless workers and automatically deleted immediately after processing."
+      question: "How does Pdfyara protect my privacy and document data?",
+      answer: "For tools running client-side, Pdfyara executes mathematical transformations directly in your browser using WebAssembly. Your documents are never uploaded to remote servers. Where server-side processing is required for complex conversions, files are handled in isolated stateless workers and automatically deleted immediately after processing."
     },
     {
       question: "Do I need to install any software or desktop plugins?",
-      answer: "No. Filora operates directly in any modern web browser on Mac, Windows, Linux, iOS, and Android without plugins or installation."
+      answer: "No. Pdfyara operates directly in any modern web browser on Mac, Windows, Linux, iOS, and Android without plugins or installation."
     },
     {
-      question: "Can I use Filora on mobile phones and tablets?",
-      answer: "Yes! Filora is fully responsive and optimized for touch interactions on smartphones and tablets, allowing you to sign, compress, or merge PDFs on the go."
+      question: "Can I use Pdfyara on mobile phones and tablets?",
+      answer: "Yes! Pdfyara is fully responsive and optimized for touch interactions on smartphones and tablets, allowing you to sign, compress, or merge PDFs on the go."
     }
   ];
 
@@ -183,7 +183,7 @@ export default function HomePage() {
             Simple Workflow
           </div>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-neutral-900">
-            How Filora Works
+            How Pdfyara Works
           </h2>
           <p className="text-xs sm:text-sm text-neutral-500">
             Complete your document tasks with as few steps as possible.
@@ -217,14 +217,14 @@ export default function HomePage() {
         <InContentAd />
       </div>
 
-      {/* 5. WHY FILORA (4 PILLARS) */}
+      {/* 5. WHY PDFYARA (4 PILLARS) */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div className="text-center max-w-2xl mx-auto space-y-2">
           <div className="text-xs font-bold text-filora uppercase tracking-wider">
             Product Principles
           </div>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-neutral-900">
-            Why Choose Filora?
+            Why Choose Pdfyara?
           </h2>
         </div>
 
@@ -253,10 +253,10 @@ export default function HomePage() {
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div className="space-y-6">
           <h2 className="text-2xl sm:text-3xl font-extrabold text-neutral-900">
-            What Can You Do with Filora?
+            What Can You Do with Pdfyara?
           </h2>
           <p className="text-sm text-neutral-700 leading-relaxed">
-            Filora is built to simplify the complete document lifecycle for individuals, businesses, educators, and legal professionals. From standard tasks like combining receipts into a single monthly PDF to complex workflows like applying Bates numbers for legal discovery, Filora eliminates the need for bulky software suites.
+            Pdfyara is built to simplify the complete document lifecycle for individuals, businesses, educators, and legal professionals. From standard tasks like combining receipts into a single monthly PDF to complex workflows like applying Bates numbers for legal discovery, Pdfyara eliminates the need for bulky software suites.
           </p>
         </div>
 
@@ -264,7 +264,7 @@ export default function HomePage() {
           <div className="p-6 rounded-3xl bg-surface-subtle border border-neutral-200 space-y-3">
             <h3 className="text-base font-bold text-neutral-900">Browser-Based vs Server-Based Processing</h3>
             <p className="text-xs text-neutral-600 leading-relaxed">
-              Whenever technically possible, Filora processes documents locally using WebAssembly and client-side JavaScript. This ensures that your financial statements, health records, and private contracts never leave your computer or phone.
+              Whenever technically possible, Pdfyara processes documents locally using WebAssembly and client-side JavaScript. This ensures that your financial statements, health records, and private contracts never leave your computer or phone.
             </p>
           </div>
 
@@ -311,7 +311,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 7. QUERIES & ADVICE FOR FILORA */}
+      {/* 7. QUERIES & ADVICE FOR PDFYARA */}
       <FeedbackSection recipientEmail="raokamlesh2803@gmail.com" />
 
       {/* 8. FINAL CTA */}
@@ -322,7 +322,7 @@ export default function HomePage() {
               Ready to Simplify Your Documents?
             </h2>
             <p className="text-sm sm:text-base text-filora-200 leading-relaxed">
-              Join thousands of students, freelancers, and businesses who rely on Filora for fast, free, and privacy-conscious document processing.
+              Join thousands of students, freelancers, and businesses who rely on Pdfyara for fast, free, and privacy-conscious document processing.
             </p>
           </div>
 

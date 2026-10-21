@@ -47,7 +47,7 @@ export function CookieBanner() {
         <div className="flex-1 space-y-2">
           <h4 className="text-sm font-bold text-neutral-900">Cookie & Privacy Preferences</h4>
           <p className="text-xs text-neutral-600 leading-relaxed">
-            Filora uses privacy-friendly cookies and local storage to remember your tool preferences and ensure optimal application performance. Read our{" "}
+            Pdfyara uses privacy-friendly cookies and local storage to remember your tool preferences and ensure optimal application performance. Read our{" "}
             <Link href="/privacy-policy" className="text-filora hover:underline font-medium">
               Privacy Policy
             </Link>{" "}

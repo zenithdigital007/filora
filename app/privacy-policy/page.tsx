@@ -2,8 +2,8 @@ import { Breadcrumbs } from "@/components/common/Breadcrumbs";
 import { ShieldCheck, Lock, CheckCircle2, EyeOff } from "lucide-react";
 
 export const metadata = {
-  title: "Privacy Policy | Filora",
-  description: "Learn how Filora protects your confidential files with client-side WebAssembly processing and zero data retention.",
+  title: "Privacy Policy | Pdfyara",
+  description: "Learn how Pdfyara protects your confidential files with client-side WebAssembly processing and zero data retention.",
 };
 
 export default function PrivacyPolicyPage() {
@@ -28,7 +28,7 @@ export default function PrivacyPolicyPage() {
         <section className="space-y-3">
           <h2 className="text-xl font-bold text-neutral-900">1. Client-Side Browser Processing (Default)</h2>
           <p>
-            The majority of Filora&apos;s tools (including Merge PDF, Split PDF, Compress PDF, Organize PDF, Rotate PDF, Watermark PDF, Page Numbers, Fill & Sign, Protect PDF, Bates Numbering, and OCR) execute <strong>locally in your web browser</strong> using WebAssembly and client-side JavaScript.
+            The majority of Pdfyara&apos;s tools (including Merge PDF, Split PDF, Compress PDF, Organize PDF, Rotate PDF, Watermark PDF, Page Numbers, Fill & Sign, Protect PDF, Bates Numbering, and OCR) execute <strong>locally in your web browser</strong> using WebAssembly and client-side JavaScript.
           </p>
           <p>
             When using these tools, your files are processed entirely in your computer or phone&apos;s memory sandbox. Your document content is never transmitted across the internet or uploaded to any external server.
@@ -51,21 +51,21 @@ export default function PrivacyPolicyPage() {
         <section className="space-y-3">
           <h2 className="text-xl font-bold text-neutral-900">3. Local Storage Usage</h2>
           <p>
-            Filora uses your browser&apos;s <code>localStorage</code> solely to save your UI preferences (e.g. your favorited tools and recent tool history). We never store document contents, signatures, or personal data in localStorage.
+            Pdfyara uses your browser&apos;s <code>localStorage</code> solely to save your UI preferences (e.g. your favorited tools and recent tool history). We never store document contents, signatures, or personal data in localStorage.
           </p>
         </section>
 
         <section className="space-y-3">
           <h2 className="text-xl font-bold text-neutral-900">4. Advertising & Analytics</h2>
           <p>
-            Filora may display compliant advertising units through Google AdSense to support the free availability of our tools. Third-party advertising vendors, including Google, may use cookies to serve ads based on prior visits to this or other websites. You may manage your cookie preferences at any time.
+            Pdfyara may display compliant advertising units through Google AdSense to support the free availability of our tools. Third-party advertising vendors, including Google, may use cookies to serve ads based on prior visits to this or other websites. You may manage your cookie preferences at any time.
           </p>
         </section>
 
         <section className="space-y-3">
           <h2 className="text-xl font-bold text-neutral-900">5. Contact Information</h2>
           <p>
-            For questions regarding our privacy practices, please contact us at <code>privacy@filora.app</code>.
+            For questions regarding our privacy practices, please contact us at <code>raokamlesh2803@gmail.com</code>.
           </p>
         </section>
       </div>

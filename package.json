@@ -1,7 +1,7 @@
 {
-  "name": "filora",
+  "name": "pdfyara",
   "version": "1.0.0",
-  "description": "Filora — Free Online PDF & Document Toolkit. Files, made effortless.",
+  "description": "Pdfyara — Free Online PDF & Document Toolkit. Files, made effortless.",
   "private": true,
   "scripts": {
     "dev": "next dev",

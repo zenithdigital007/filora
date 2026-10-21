@@ -2,14 +2,14 @@ import { Breadcrumbs } from "@/components/common/Breadcrumbs";
 import { Sparkles, ShieldCheck, Heart, Layers, Lock, Zap } from "lucide-react";
 
 export const metadata = {
-  title: "About Filora — Free Online Document Productivity Toolkit",
-  description: "Learn about Filora's mission to make document workflows simple, fast, and privacy-conscious.",
+  title: "About Pdfyara — Free Online Document Productivity Toolkit",
+  description: "Learn about Pdfyara's mission to make document workflows simple, fast, and privacy-conscious.",
 };
 
 export default function AboutPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-12">
-      <Breadcrumbs items={[{ label: "About Filora" }]} />
+      <Breadcrumbs items={[{ label: "About Pdfyara" }]} />
 
       <div className="space-y-4">
         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-filora-50 border border-filora-100 text-filora text-xs font-bold shadow-xs">
@@ -20,7 +20,7 @@ export default function AboutPage() {
           Files, made effortless.
         </h1>
         <p className="text-base sm:text-lg text-neutral-600 leading-relaxed">
-          Filora is built on a single core belief: working with PDFs and digital documents should not require expensive subscription software, invasive registrations, or uploading confidential personal records to mysterious remote cloud servers.
+          Pdfyara is built on a single core belief: working with PDFs and digital documents should not require expensive subscription software, invasive registrations, or uploading confidential personal records to mysterious remote cloud servers.
         </p>
       </div>
 
@@ -59,10 +59,10 @@ export default function AboutPage() {
       <div className="space-y-6 text-sm text-neutral-700 leading-relaxed bg-white p-8 rounded-3xl border border-neutral-200 shadow-subtle">
         <h2 className="text-2xl font-bold text-neutral-900">Who We Build For</h2>
         <p>
-          From students compiling research papers to legal teams stamping Bates numbers during litigation discovery, Filora empowers millions of document workflows worldwide. We design every tool with a focus on simplicity, visual clarity, and honest limitations.
+          From students compiling research papers to legal teams stamping Bates numbers during litigation discovery, Pdfyara empowers millions of document workflows worldwide. We design every tool with a focus on simplicity, visual clarity, and honest limitations.
         </p>
         <p>
-          Filora is an independent product. We are not affiliated with Adobe, Microsoft, Apple, Google, or DocuSign. All trademarks mentioned are used purely for descriptive format identification.
+          Pdfyara is an independent product. We are not affiliated with Adobe, Microsoft, Apple, Google, or DocuSign. All trademarks mentioned are used purely for descriptive format identification.
         </p>
       </div>
     </div>

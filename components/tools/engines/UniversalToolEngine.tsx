@@ -84,7 +84,7 @@ export function UniversalToolEngine({ tool }: UniversalToolEngineProps) {
       } else if (tool.slug === "pdf-to-word" || tool.slug === "pdf-to-excel") {
         // Export structured mock document blob
         setTimeout(() => {
-          const content = `Filora Export for ${file.name}\n\nDocument structure extracted successfully.\nGenerated on ${new Date().toISOString()}`;
+          const content = `Pdfyara Export for ${file.name}\n\nDocument structure extracted successfully.\nGenerated on ${new Date().toISOString()}`;
           const blob = new Blob([content], { type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document" });
           saveAs(blob, `${file.name.replace(".pdf", "")}.${tool.slug === "pdf-to-excel" ? "csv" : "docx"}`);
           setStatus("complete");

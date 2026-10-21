@@ -16,7 +16,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "what-is-a-pdf-and-why-is-it-universal",
     title: "What Is a PDF? The History and Engineering Behind the Universal Document Format",
     category: "Document Technology",
-    author: "Filora Editorial Team",
+    author: "Pdfyara Editorial Team",
     publishedAt: "2026-03-01",
     readTime: "6 min read",
     excerpt: "Explore how the Portable Document Format transformed computing by guaranteeing identical visual presentation across any device or operating system.",
@@ -41,7 +41,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "how-pdf-compression-works",
     title: "How PDF Compression Actually Works Behind the Scenes",
     category: "Technical",
-    author: "Filora Editorial Team",
+    author: "Pdfyara Editorial Team",
     publishedAt: "2026-02-22",
     readTime: "7 min read",
     excerpt: "A deep dive into Flate algorithms, image downsampling matrices, and font subset optimization.",
@@ -62,7 +62,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "what-is-bates-numbering-in-legal-workflows",
     title: "What Is Bates Numbering? The Essential Guide for Legal and Compliance Teams",
     category: "Legal & Discovery",
-    author: "Filora Legal Technology Group",
+    author: "Pdfyara Legal Technology Group",
     publishedAt: "2026-02-14",
     readTime: "5 min read",
     excerpt: "Understand how Bates stamping works, why courts require it, and how to configure sequential prefixes and padding.",
@@ -83,7 +83,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "why-browser-based-pdf-processing-protects-privacy",
     title: "Why Browser-Based PDF Processing Is the Future of Document Privacy",
     category: "Privacy & Security",
-    author: "Filora Security Team",
+    author: "Pdfyara Security Team",
     publishedAt: "2026-02-05",
     readTime: "6 min read",
     excerpt: "Learn how modern WebAssembly and client-side JavaScript allow complete document manipulation without transmitting confidential data across the internet.",
@@ -95,7 +95,7 @@ export const BLOG_POSTS: BlogPost[] = [
         },
         {
           heading: "How Client-Side WebAssembly Changes the Game",
-          body: "Filora executes PDF manipulation directly inside your local browser memory sandbox. Your CPU processes the mathematical transformations and generates the download locally. Your confidential documents never leave your device."
+          body: "Pdfyara executes PDF manipulation directly inside your local browser memory sandbox. Your CPU processes the mathematical transformations and generates the download locally. Your confidential documents never leave your device."
         }
       ]
     }

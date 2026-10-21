@@ -5,9 +5,9 @@ import { TopContentAd, BottomContentAd } from "@/components/ads/AdBanners";
 import { MessageSquare, Lightbulb, Sparkles, ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Send Advice & Queries | Filora",
+  title: "Send Advice & Queries | Pdfyara",
   description:
-    "Share your queries, feature suggestions, or advice for the betterment of Filora directly with our development team. Help shape the future of privacy-friendly PDF tools.",
+    "Share your queries, feature suggestions, or advice for the betterment of Pdfyara directly with our development team. Help shape the future of privacy-friendly PDF tools.",
 };
 
 export default function FeedbackPage() {
@@ -23,10 +23,10 @@ export default function FeedbackPage() {
             <span>Community Driven Development</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-extrabold text-neutral-900 tracking-tight font-display">
-            Advice & Queries for Filora
+            Advice & Queries for Pdfyara
           </h1>
           <p className="text-sm sm:text-base text-neutral-600 leading-relaxed">
-            Filora is built to serve everyday document workflows without friction or subscriptions. Have ideas for how to make our tools faster, more intuitive, or want to suggest an entirely new PDF utility? Send your advice directly to the developer.
+            Pdfyara is built to serve everyday document workflows without friction or subscriptions. Have ideas for how to make our tools faster, more intuitive, or want to suggest an entirely new PDF utility? Send your advice directly to the developer.
           </p>
         </div>
       </div>

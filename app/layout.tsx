@@ -18,7 +18,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Filora — Free PDF Editor & Online Document Toolkit | Files, made effortless.",
+  title: "Pdfyara — Free PDF Editor & Online Document Toolkit | Files, made effortless.",
   description:
     "100% Free Online PDF Editor and document productivity suite. Edit PDF text, merge, split, compress, convert, sign, watermark, protect, and organize PDFs right in your browser without watermarks or registration.",
   keywords: [
@@ -33,23 +33,23 @@ export const metadata: Metadata = {
     "split PDF",
     "PDF to Word",
     "convert PDF free",
-    "Filora",
+    "Pdfyara",
   ],
   metadataBase: new URL("https://filora.app"),
   alternates: {
     canonical: "https://filora.app",
   },
   openGraph: {
-    title: "Filora — Free PDF Editor & Online Document Toolkit",
+    title: "Pdfyara — Free PDF Editor & Online Document Toolkit",
     description: "Files, made effortless. 100% Free Online PDF Editor and tools for every document.",
     url: "https://filora.app",
-    siteName: "Filora",
+    siteName: "Pdfyara",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Filora — Free PDF Editor & Online Document Toolkit",
+    title: "Pdfyara — Free PDF Editor & Online Document Toolkit",
     description: "Free Online PDF Editor & complete document productivity suite.",
   },
   robots: {
@@ -77,7 +77,7 @@ export default function RootLayout({
         "@type": "WebSite",
         "@id": "https://filora.app/#website",
         url: "https://filora.app",
-        name: "Filora",
+        name: "Pdfyara",
         description: "Free Online PDF Editor & Document Processing Platform",
         potentialAction: {
           "@type": "SearchAction",
@@ -88,14 +88,14 @@ export default function RootLayout({
       {
         "@type": "Organization",
         "@id": "https://filora.app/#organization",
-        name: "Filora",
+        name: "Pdfyara",
         url: "https://filora.app",
         logo: "https://filora.app/icon",
         sameAs: ["https://github.com/zenithdigital007/filora"],
       },
       {
         "@type": "SoftwareApplication",
-        name: "Filora Free PDF Editor",
+        name: "Pdfyara Free PDF Editor",
         applicationCategory: "BusinessApplication",
         operatingSystem: "All",
         url: "https://filora.app/editor",

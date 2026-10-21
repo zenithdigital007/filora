@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 
-const STORAGE_KEY = "filora_favorite_tools";
+const STORAGE_KEY = "pdfyara_favorite_tools";
 
 export function useFavorites() {
   const [favorites, setFavorites] = useState<string[]>([]);
@@ -10,7 +10,7 @@ export function useFavorites() {
 
   useEffect(() => {
     try {
-      const stored = localStorage.getItem(STORAGE_KEY);
+      const stored = localStorage.getItem(STORAGE_KEY) || localStorage.getItem("filora_favorite_tools");
       if (stored) {
         setFavorites(JSON.parse(stored));
       }

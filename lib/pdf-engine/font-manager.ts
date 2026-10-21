@@ -1,5 +1,5 @@
 /**
- * Filora Font Manager & Detection Engine
+ * Pdfyara Font Manager & Detection Engine
  * 
  * Provides:
  * 1. Comprehensive catalog of 60+ top document, system, and Google fonts
@@ -697,7 +697,7 @@ export async function ensureFontLoaded(fontFamily: string): Promise<boolean> {
 
     // Inject Google Font link tag if not already injected
     const fontSlug = cleanName.toLowerCase().replace(/[^a-z0-9]/g, "-");
-    const linkId = `filora-font-${fontSlug}`;
+    const linkId = `pdfyara-font-${fontSlug}`;
 
     if (!document.getElementById(linkId)) {
       const link = document.createElement("link");
@@ -719,7 +719,7 @@ export async function ensureFontLoaded(fontFamily: string): Promise<boolean> {
     loadedFontsCache.add(cleanName);
     return true;
   } catch (err) {
-    console.warn(`[Filora Font Manager] Font load timeout or fallback for "${cleanName}":`, err);
+    console.warn(`[Pdfyara Font Manager] Font load timeout or fallback for "${cleanName}":`, err);
     return false;
   }
 }

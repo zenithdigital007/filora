@@ -108,7 +108,7 @@ export function PropertiesPanel({
   }, [isFontDropdownOpen]);
 
   const colorPalette = [
-    "#5003C0", // Filora Purple
+    "#5003C0", // Pdfyara Purple
     "#171717", // Neutral dark
     "#DC2626", // Red
     "#16A34A", // Green

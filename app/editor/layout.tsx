@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Free PDF Editor Online — Edit PDF Text, Annotate & Sign PDF Free | Filora",
+  title: "Free PDF Editor Online — Edit PDF Text, Annotate & Sign PDF Free | Pdfyara",
   description:
     "100% Free Online PDF Editor. Edit original PDF text with exact font matching, add text annotations, digital signatures, drawings, shapes, and stamps directly in your browser. No watermarks, no sign-up required.",
   keywords: [
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "sign pdf online free",
     "annotate pdf free",
     "best free pdf editor",
-    "Filora PDF editor",
+    "Pdfyara PDF editor",
   ],
   alternates: {
     canonical: "https://filora.app/editor",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     description:
       "100% Free Online PDF Editor. Edit PDF text, draw, highlight, stamp, and electronically sign documents right in your browser.",
     url: "https://filora.app/editor",
-    siteName: "Filora",
+    siteName: "Pdfyara",
     type: "website",
   },
   twitter: {
@@ -43,7 +43,7 @@ export default function EditorLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    name: "Filora Free PDF Editor",
+    name: "Pdfyara Free PDF Editor",
     alternateName: "Free PDF Editor Online",
     description:
       "100% Free Online PDF Editor. Edit original PDF text with font matching, add signatures, shapes, annotations, stamps, and watermarks without sign-up or watermarks.",

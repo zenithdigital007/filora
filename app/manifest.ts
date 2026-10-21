@@ -2,8 +2,8 @@ import { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Filora — Free Online PDF & Document Toolkit",
-    short_name: "Filora",
+    name: "Pdfyara — Free Online PDF & Document Toolkit",
+    short_name: "Pdfyara",
     description: "Files, made effortless. Simple tools for every document.",
     start_url: "/",
     display: "standalone",

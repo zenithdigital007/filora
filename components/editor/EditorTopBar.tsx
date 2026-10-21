@@ -54,10 +54,10 @@ export function EditorTopBar({
       <div className="flex items-center gap-3">
         <Link href="/" className="flex items-center gap-2 group">
           <div className="w-8 h-8 rounded-lg bg-filora text-white flex items-center justify-center font-extrabold text-sm">
-            F
+            P
           </div>
           <span className="font-extrabold text-sm text-neutral-900 hidden sm:inline group-hover:text-filora transition-colors">
-            FILORA
+            PDFYARA
           </span>
         </Link>
 

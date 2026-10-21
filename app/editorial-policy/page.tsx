@@ -1,8 +1,8 @@
 import { Breadcrumbs } from "@/components/common/Breadcrumbs";
 
 export const metadata = {
-  title: "Editorial Policy | Filora",
-  description: "Learn how Filora researches, writes, reviews, and updates its technical guides, tutorials, and document references.",
+  title: "Editorial Policy | Pdfyara",
+  description: "Learn how Pdfyara researches, writes, reviews, and updates its technical guides, tutorials, and document references.",
 };
 
 export default function EditorialPolicyPage() {
@@ -23,7 +23,7 @@ export default function EditorialPolicyPage() {
         <section className="space-y-2">
           <h2 className="text-lg font-bold text-neutral-900">1. Original & Genuine Value</h2>
           <p>
-            At Filora, we reject thin SEO filler content. Every guide, technical tutorial, and glossary entry published on our platform is researched, structured, and reviewed by document technology specialists to provide genuine, actionable help to users.
+            At Pdfyara, we reject thin SEO filler content. Every guide, technical tutorial, and glossary entry published on our platform is researched, structured, and reviewed by document technology specialists to provide genuine, actionable help to users.
           </p>
         </section>
 
@@ -44,7 +44,7 @@ export default function EditorialPolicyPage() {
         <section className="space-y-2">
           <h2 className="text-lg font-bold text-neutral-900">4. Corrections & User Feedback</h2>
           <p>
-            If you identify a factual error or outdated reference in any of our guides, please submit a note to <code>editorial@filora.app</code> for review and correction.
+            If you identify a factual error or outdated reference in any of our guides, please submit a note to <code>raokamlesh2803@gmail.com</code> for review and correction.
           </p>
         </section>
       </div>

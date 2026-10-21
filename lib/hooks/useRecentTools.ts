@@ -11,7 +11,7 @@ export interface RecentToolEntry {
   timestamp: number;
 }
 
-const STORAGE_KEY = "filora_recent_tools";
+const STORAGE_KEY = "pdfyara_recent_tools";
 const MAX_RECENT = 8;
 
 export function useRecentTools() {
@@ -20,7 +20,7 @@ export function useRecentTools() {
 
   useEffect(() => {
     try {
-      const stored = localStorage.getItem(STORAGE_KEY);
+      const stored = localStorage.getItem(STORAGE_KEY) || localStorage.getItem("filora_recent_tools");
       if (stored) {
         setRecentTools(JSON.parse(stored));
       }

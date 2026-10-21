@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: ToolPageProps): Promise<Metad
   const tool = getToolBySlug(slug);
   if (!tool) {
     return {
-      title: "Tool Not Found | Filora",
+      title: "Tool Not Found | Pdfyara",
     };
   }
 
@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: ToolPageProps): Promise<Metad
       title: tool.seoTitle,
       description: tool.seoDescription,
       url: `https://filora.app/tools/${tool.slug}`,
-      siteName: "Filora",
+      siteName: "Pdfyara",
     },
     alternates: {
       canonical: `https://filora.app/tools/${tool.slug}`,

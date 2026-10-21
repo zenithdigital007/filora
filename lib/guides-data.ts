@@ -27,9 +27,9 @@ export const GUIDES_DATA: GuideItem[] = [
       intro: "Combining multiple PDF files is one of the most essential document management tasks for students, freelancers, and business professionals. Whether you are assembling financial reports, submitting multi-part job applications, or consolidating lecture notes, this guide demonstrates how to merge PDFs quickly and securely directly within your browser.",
       steps: [
         { stepNumber: 1, title: "Gather your source documents", description: "Collect all the PDF documents you want to combine. Ensure they are not locked with passwords that prevent merging.", tip: "Rename your source files with numbering (e.g. 01_Cover, 02_Resume) to easily spot their order." },
-        { stepNumber: 2, title: "Upload your PDFs to Filora", description: "Open Filora's Merge PDF tool and drag all files into the upload area or click browse." },
+        { stepNumber: 2, title: "Upload your PDFs to Pdfyara", description: "Open Pdfyara's Merge PDF tool and drag all files into the upload area or click browse." },
         { stepNumber: 3, title: "Arrange the sequence", description: "Drag and drop the thumbnail cards to order your documents exactly as you want them to appear in the combined output." },
-        { stepNumber: 4, title: "Click Merge & Download", description: "Click the Merge button. Filora joins the PDF streams client-side and generates your download link immediately." }
+        { stepNumber: 4, title: "Click Merge & Download", description: "Click the Merge button. Pdfyara joins the PDF streams client-side and generates your download link immediately." }
       ],
       proTips: [
         "Verify that all merged documents share consistent page orientations before sending to external clients.",
@@ -41,8 +41,8 @@ export const GUIDES_DATA: GuideItem[] = [
         "Forgetting to verify the final page count after merging."
       ],
       faq: [
-        { q: "Does merging PDFs reduce image quality?", a: "No, Filora preserves the exact vector paths and raster resolution of your source documents." },
-        { q: "Can I combine PDFs of different page sizes (e.g. A4 and US Letter)?", a: "Yes, Filora smoothly merges pages of varying dimensions into a single unified file." }
+        { q: "Does merging PDFs reduce image quality?", a: "No, Pdfyara preserves the exact vector paths and raster resolution of your source documents." },
+        { q: "Can I combine PDFs of different page sizes (e.g. A4 and US Letter)?", a: "Yes, Pdfyara smoothly merges pages of varying dimensions into a single unified file." }
       ]
     },
     relatedTools: ["merge-pdf", "organize-pdf", "split-pdf", "compress-pdf"]
@@ -58,7 +58,7 @@ export const GUIDES_DATA: GuideItem[] = [
       intro: "PDF file sizes can easily balloon when they contain high-resolution scans, uncompressed photos, or redundant font dictionaries. Discover how PDF compression works and how to achieve the best balance between small file size and clear visual reading quality.",
       steps: [
         { stepNumber: 1, title: "Analyze the document content", description: "Determine whether your PDF contains mostly vector text or heavy scanned images. Scanned image PDFs will achieve the largest reduction." },
-        { stepNumber: 2, title: "Upload to Filora Compress Tool", description: "Drag your file into Filora's Compress PDF tool." },
+        { stepNumber: 2, title: "Upload to Pdfyara Compress Tool", description: "Drag your file into Pdfyara's Compress PDF tool." },
         { stepNumber: 3, title: "Select your compression preset", description: "Choose 'Balanced' for general documents or 'Maximum Compression' if facing strict portal upload limits (e.g. under 2MB)." },
         { stepNumber: 4, title: "Download optimized file", description: "Compare the before and after file sizes and download your compressed PDF." }
       ],
@@ -86,7 +86,7 @@ export const GUIDES_DATA: GuideItem[] = [
     content: {
       intro: "Large multi-page PDF documents frequently need to be divided into individual sections for client distribution or privacy reasons. Learn how to use range syntax to split documents precisely.",
       steps: [
-        { stepNumber: 1, title: "Upload the target document", description: "Drop your PDF into Filora's Split PDF workspace." },
+        { stepNumber: 1, title: "Upload the target document", description: "Drop your PDF into Pdfyara's Split PDF workspace." },
         { stepNumber: 2, title: "Choose splitting method", description: "Select 'Split by page ranges', 'Extract every page', or 'Split odd/even pages'." },
         { stepNumber: 3, title: "Enter page ranges", description: "Specify ranges using standard format: e.g. 1-3, 5, 8-10." },
         { stepNumber: 4, title: "Download split files", description: "Download individual split PDFs or a convenient ZIP package." }
@@ -99,7 +99,7 @@ export const GUIDES_DATA: GuideItem[] = [
         "Entering page numbers that exceed the total page count of the document."
       ],
       faq: [
-        { q: "Can I extract only odd or even pages for double-sided printing?", a: "Yes, Filora provides one-click options to isolate odd or even pages." }
+        { q: "Can I extract only odd or even pages for double-sided printing?", a: "Yes, Pdfyara provides one-click options to isolate odd or even pages." }
       ]
     },
     relatedTools: ["split-pdf", "extract-pages", "delete-pdf-pages", "organize-pdf"]
@@ -112,9 +112,9 @@ export const GUIDES_DATA: GuideItem[] = [
     lastUpdated: "2026-03-08",
     summary: "A practical guide to adding text overlays, notes, stamps, drawings, and highlights to PDF files.",
     content: {
-      intro: "Reviewing drafts, grading assignments, and providing feedback requires versatile annotation tools. Learn how to use Filora's full visual PDF Editor to mark up documents.",
+      intro: "Reviewing drafts, grading assignments, and providing feedback requires versatile annotation tools. Learn how to use Pdfyara's full visual PDF Editor to mark up documents.",
       steps: [
-        { stepNumber: 1, title: "Open the Filora PDF Editor", description: "Navigate to /editor and upload your document." },
+        { stepNumber: 1, title: "Open the Pdfyara PDF Editor", description: "Navigate to /editor and upload your document." },
         { stepNumber: 2, title: "Select an annotation tool", description: "Use the left toolbar to choose Text, Pen, Highlight, Shapes, Sticky Notes, or Stamps." },
         { stepNumber: 3, title: "Customize visual properties", description: "Adjust colors, font sizes, stroke thickness, and opacity in the right properties inspector." },
         { stepNumber: 4, title: "Save and Export", description: "Click Save to burn your annotations into a fresh, standard PDF." }
@@ -171,7 +171,7 @@ export const GUIDES_DATA: GuideItem[] = [
     content: {
       intro: "When you need to rewrite a contract, update a resume, or repurpose a whitepaper, converting PDF to Word gives you full word processing capabilities.",
       steps: [
-        { stepNumber: 1, title: "Upload your PDF", description: "Select the PDF file on Filora's PDF to Word tool." },
+        { stepNumber: 1, title: "Upload your PDF", description: "Select the PDF file on Pdfyara's PDF to Word tool." },
         { stepNumber: 2, title: "Execute conversion", description: "The engine parses layout structures, paragraphs, and tables." },
         { stepNumber: 3, title: "Download DOCX file", description: "Open and edit the resulting .docx file in Microsoft Word, Google Docs, or Pages." }
       ],
@@ -278,7 +278,7 @@ export const GUIDES_DATA: GuideItem[] = [
     content: {
       intro: "When you open a scanned PDF and pressing Ctrl+F (or Cmd+F) finds zero results, the file is purely an image. Learn how to make it searchable.",
       steps: [
-        { stepNumber: 1, title: "Upload scan to OCR PDF", description: "Drop your scanned PDF into Filora's OCR tool." },
+        { stepNumber: 1, title: "Upload scan to OCR PDF", description: "Drop your scanned PDF into Pdfyara's OCR tool." },
         { stepNumber: 2, title: "Select language", description: "Ensure the document language matches your source material." },
         { stepNumber: 3, title: "Process text recognition", description: "Let the in-browser neural engine recognize text on all pages." },
         { stepNumber: 4, title: "Export searchable text", description: "Download your searchable document." }
@@ -305,7 +305,7 @@ export const GUIDES_DATA: GuideItem[] = [
     content: {
       intro: "Emailing tax records, salary reports, or confidential contracts without encryption exposes sensitive data to interception. Learn how to encrypt your PDF with a password.",
       steps: [
-        { stepNumber: 1, title: "Select your PDF", description: "Upload the document to Filora's Protect PDF tool." },
+        { stepNumber: 1, title: "Select your PDF", description: "Upload the document to Pdfyara's Protect PDF tool." },
         { stepNumber: 2, title: "Set a strong password", description: "Choose a passphrase containing letters, numbers, and symbols." },
         { stepNumber: 3, title: "Configure permissions", description: "Optionally restrict printing or copying." },
         { stepNumber: 4, title: "Download encrypted file", description: "Save your password-protected PDF." }
@@ -317,7 +317,7 @@ export const GUIDES_DATA: GuideItem[] = [
         "Using simple passwords like '123456' or birth years."
       ],
       faq: [
-        { q: "Is the password transmitted over the web?", a: "No, Filora encrypts the PDF entirely in your browser. Your password never touches our servers." }
+        { q: "Is the password transmitted over the web?", a: "No, Pdfyara encrypts the PDF entirely in your browser. Your password never touches our servers." }
       ]
     },
     relatedTools: ["protect-pdf", "unlock-pdf", "redact-pdf", "watermark-pdf"]
@@ -334,7 +334,7 @@ export const GUIDES_DATA: GuideItem[] = [
       steps: [
         { stepNumber: 1, title: "Open Redact PDF tool", description: "Load the document containing sensitive information." },
         { stepNumber: 2, title: "Mark redaction zones", description: "Draw boxes over account numbers, SSNs, medical codes, or names." },
-        { stepNumber: 3, title: "Execute permanent redaction", description: "Filora destroys the underlying vector characters and bakes the blackout layer." },
+        { stepNumber: 3, title: "Execute permanent redaction", description: "Pdfyara destroys the underlying vector characters and bakes the blackout layer." },
         { stepNumber: 4, title: "Download and verify", description: "Open the file and verify text cannot be copied from redacted sectors." }
       ],
       proTips: [
@@ -467,7 +467,7 @@ export const GUIDES_DATA: GuideItem[] = [
     content: {
       intro: "Whether a PDF has interactive AcroForm fields or is a flat scan, learn how to fill in answers, tick checkmarks, and sign.",
       steps: [
-        { stepNumber: 1, title: "Upload the form", description: "Open the form in Filora's Fill & Sign tool." },
+        { stepNumber: 1, title: "Upload the form", description: "Open the form in Pdfyara's Fill & Sign tool." },
         { stepNumber: 2, title: "Click to type answers", description: "Click on lines to place text boxes for your name, address, and details." },
         { stepNumber: 3, title: "Add checkmarks and dates", description: "Click the checkmark tool to tick boxes." },
         { stepNumber: 4, title: "Apply your signature", description: "Sign using your mouse, touchscreen, or uploaded signature." },
@@ -498,7 +498,7 @@ export const GUIDES_DATA: GuideItem[] = [
         { stepNumber: 1, title: "Downsample raster images to 150 DPI", description: "High-DPI 600 DPI photos waste space; 150 DPI is ideal for screen reading." },
         { stepNumber: 2, title: "Convert color scans to Grayscale", description: "Dropping RGB channels to monochrome cuts image weight significantly." },
         { stepNumber: 3, title: "Remove unneeded pages and attachments", description: "Delete divider sheets and blank scan backsides." },
-        { stepNumber: 4, title: "Clean unreferenced metadata and streams", description: "Use Filora's Compress tool to purge ghost objects." }
+        { stepNumber: 4, title: "Clean unreferenced metadata and streams", description: "Use Pdfyara's Compress tool to purge ghost objects." }
       ],
       proTips: [
         "Combine compression with Grayscale for maximum reduction."
@@ -560,7 +560,7 @@ export const GUIDES_DATA: GuideItem[] = [
         "Confusing digital annotations with scanned photocopied marks."
       ],
       faq: [
-        { q: "Can I remove only highlights but keep links?", a: "Yes, Filora lets you target specific annotation categories." }
+        { q: "Can I remove only highlights but keep links?", a: "Yes, Pdfyara lets you target specific annotation categories." }
       ]
     },
     relatedTools: ["remove-annotations", "flatten-pdf", "edit-pdf"]

@@ -423,9 +423,9 @@ export default function EditorPage() {
           <div className="w-full max-w-xl bg-white p-8 rounded-3xl border border-neutral-200 shadow-xl space-y-6">
             <div className="text-center space-y-2">
               <div className="w-12 h-12 rounded-2xl bg-filora text-white font-black text-xl flex items-center justify-center mx-auto shadow-md">
-                F
+                P
               </div>
-              <h1 className="text-2xl font-black text-neutral-900">Filora PDF Studio</h1>
+              <h1 className="text-2xl font-black text-neutral-900">Pdfyara PDF Studio</h1>
               <p className="text-xs sm:text-sm text-neutral-500">
                 Edit original PDF text with matching fonts, erase content, add signatures, shapes,
                 and stamps right in your browser.

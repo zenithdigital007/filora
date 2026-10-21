@@ -5,7 +5,7 @@ import { saveAs } from "file-saver";
 
 export async function downloadFilesAsZip(
   files: { filename: string; data: Uint8Array | Blob | string }[],
-  zipFilename = "filora_export.zip"
+  zipFilename = "pdfyara_export.zip"
 ): Promise<void> {
   const zip = new JSZip();
 

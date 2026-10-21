@@ -33,10 +33,10 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: GuidePageProps) {
   const { slug } = await params;
   const guide = getGuideBySlug(slug);
-  if (!guide) return { title: "Guide Not Found | Filora" };
+  if (!guide) return { title: "Guide Not Found | Pdfyara" };
 
   return {
-    title: `${guide.title} | Filora Guide`,
+    title: `${guide.title} | Pdfyara Guide`,
     description: guide.summary,
     openGraph: {
       title: guide.title,
@@ -65,11 +65,11 @@ export default async function SingleGuidePage({ params }: GuidePageProps) {
     dateModified: guide.lastUpdated,
     author: {
       "@type": "Organization",
-      name: "Filora Editorial Team",
+      name: "Pdfyara Editorial Team",
     },
     publisher: {
       "@type": "Organization",
-      name: "Filora",
+      name: "Pdfyara",
       logo: {
         "@type": "ImageObject",
         url: "https://filora.app/icon.png",

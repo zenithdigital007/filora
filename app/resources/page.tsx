@@ -5,7 +5,7 @@ import { Breadcrumbs } from "@/components/common/Breadcrumbs";
 import { TopContentAd, BottomContentAd } from "@/components/ads/AdBanners";
 
 export const metadata = {
-  title: "PDF Resources & Technical Specifications | Filora",
+  title: "PDF Resources & Technical Specifications | Pdfyara",
   description: "Explore comprehensive PDF dimensions tables, ISO paper standards, security cipher guides, and document terminology glossaries.",
 };
 

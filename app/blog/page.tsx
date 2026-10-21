@@ -5,7 +5,7 @@ import { Breadcrumbs } from "@/components/common/Breadcrumbs";
 import { TopContentAd, BottomContentAd } from "@/components/ads/AdBanners";
 
 export const metadata = {
-  title: "Document Engineering Blog | Filora",
+  title: "Document Engineering Blog | Pdfyara",
   description: "Technical deep dives into PDF standards, WebAssembly, cryptographic encryption, and document productivity engineering.",
 };
 
@@ -20,7 +20,7 @@ export default function BlogHubPage() {
           <span>Document Architecture</span>
         </div>
         <h1 className="text-3xl sm:text-5xl font-extrabold text-neutral-900 tracking-tight">
-          Filora Engineering Blog
+          Pdfyara Engineering Blog
         </h1>
         <p className="text-sm sm:text-base text-neutral-600">
           Insights into digital document standards, privacy architecture, and high-performance browser computing.

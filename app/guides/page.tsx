@@ -5,7 +5,7 @@ import { Breadcrumbs } from "@/components/common/Breadcrumbs";
 import { TopContentAd, BottomContentAd } from "@/components/ads/AdBanners";
 
 export const metadata = {
-  title: "PDF Guides & Document Tutorials | Filora",
+  title: "PDF Guides & Document Tutorials | Pdfyara",
   description: "Comprehensive step-by-step guides on how to merge, compress, split, sign, redact, and edit PDF documents.",
 };
 

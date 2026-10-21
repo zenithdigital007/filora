@@ -128,7 +128,7 @@ export const RESOURCES_DATA: ResourceItem[] = [
         },
         {
           heading: "Privacy and Security",
-          body: "Filora performs core document transformations (merging, splitting, watermarking, page numbers, encryption, client OCR) locally inside your browser using WebAssembly. Your files are not uploaded to our servers for browser-based operations."
+          body: "Pdfyara performs core document transformations (merging, splitting, watermarking, page numbers, encryption, client OCR) locally inside your browser using WebAssembly. Your files are not uploaded to our servers for browser-based operations."
         }
       ]
     }
