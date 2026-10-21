@@ -5,7 +5,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { CookieBanner } from "@/components/layout/CookieBanner";
 import { Analytics } from "@vercel/analytics/next";
-import { getBaseUrl, SITE_CONFIG } from "@/lib/site-config";
+import { getBaseUrl, getAdSenseClientId, SITE_CONFIG } from "@/lib/site-config";
 import { 
   generateWebSiteSchema, 
   generateOrganizationSchema, 
@@ -105,6 +105,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const currentBaseUrl = getBaseUrl();
+  const adsenseClientId = getAdSenseClientId();
   const rootSchemaGraph = {
     "@context": "https://schema.org",
     "@graph": [
@@ -121,6 +122,16 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(rootSchemaGraph) }}
         />
+        {adsenseClientId && (
+          <>
+            <meta name="google-adsense-account" content={adsenseClientId} />
+            <script
+              async
+              src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClientId}`}
+              crossOrigin="anonymous"
+            />
+          </>
+        )}
       </head>
       <body className="min-h-screen bg-surface-background text-neutral-900 font-sans antialiased selection:bg-filora-100 selection:text-filora">
         <div className="flex flex-col min-h-screen">

@@ -28,6 +28,10 @@ export function getBaseUrl(): string {
   return "http://localhost:3000";
 }
 
+export function getAdSenseClientId(): string {
+  return (process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID || "").trim();
+}
+
 export const SITE_CONFIG = {
   brandName: "PDFYARA",
   shortName: "Pdfyara",
@@ -38,4 +42,6 @@ export const SITE_CONFIG = {
     "100% Free Online PDF Editor. Edit PDF text directly with matching fonts, merge, split, compress, sign, convert, and organize PDF documents in your browser with zero watermarks or signup.",
   supportEmail: "raokamlesh2803@gmail.com",
   socialCardType: "summary_large_image",
+  adsenseClientId: process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID || "",
 } as const;
+
