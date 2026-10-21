@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { CookieBanner } from "@/components/layout/CookieBanner";
+import { Analytics } from "@vercel/analytics/next";
 import { getBaseUrl, SITE_CONFIG } from "@/lib/site-config";
 import { 
   generateWebSiteSchema, 
@@ -129,6 +130,7 @@ export default function RootLayout({
         </div>
 
         <CookieBanner />
+        <Analytics />
       </body>
     </html>
   );
