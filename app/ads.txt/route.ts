@@ -7,15 +7,12 @@ export async function GET() {
   const clientId = getAdSenseClientId();
   
   // Format: "pub-XXXXXXXXXXXXXXXX" (strips leading "ca-" if present)
-  let pubId = "pub-XXXXXXXXXXXXXXXX";
+  let pubId = "pub-4543066948758573";
   if (clientId) {
     pubId = clientId.startsWith("ca-") ? clientId.slice(3) : clientId;
   }
 
-  const content = `# Google AdSense ads.txt for pdfyara.com
-# Reference: https://support.google.com/adsense/answer/7532444
-google.com, ${pubId}, DIRECT, f08c47fec0942fa0
-`;
+  const content = `google.com, ${pubId}, DIRECT, f08c47fec0942fa0\n`;
 
   return new NextResponse(content, {
     status: 200,

@@ -29,7 +29,7 @@ export function getBaseUrl(): string {
 }
 
 export function getAdSenseClientId(): string {
-  return (process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID || "").trim();
+  return (process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID || "ca-pub-4543066948758573").trim();
 }
 
 export const SITE_CONFIG = {
@@ -42,6 +42,6 @@ export const SITE_CONFIG = {
     "100% Free Online PDF Editor. Edit PDF text directly with matching fonts, merge, split, compress, sign, convert, and organize PDF documents in your browser with zero watermarks or signup.",
   supportEmail: "raokamlesh2803@gmail.com",
   socialCardType: "summary_large_image",
-  adsenseClientId: process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID || "",
+  adsenseClientId: process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID || "ca-pub-4543066948758573",
 } as const;
 
