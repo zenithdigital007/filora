@@ -15,7 +15,8 @@ import {
   ShieldCheck, 
   Sparkles,
   BookOpen,
-  FolderOpen
+  FolderOpen,
+  FileText
 } from "lucide-react";
 import { GlobalSearchModal } from "@/components/common/GlobalSearchModal";
 
@@ -161,6 +162,13 @@ export function Header() {
                 >
                   Resources
                 </Link>
+
+                <Link
+                  href="/blog"
+                  className="px-3 py-2 text-sm font-medium text-neutral-700 hover:text-filora hover:bg-filora-50 rounded-lg transition-colors"
+                >
+                  Blog
+                </Link>
               </nav>
             </div>
 
@@ -261,6 +269,15 @@ export function Header() {
             >
               <Sparkles className="w-5 h-5 text-neutral-400" />
               <span>Resources & Glossary</span>
+            </Link>
+
+            <Link
+              href="/blog"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="flex items-center gap-3 p-3 rounded-xl text-neutral-800 hover:bg-surface-subtle font-medium text-sm"
+            >
+              <FileText className="w-5 h-5 text-neutral-400" />
+              <span>Engineering Blog</span>
             </Link>
           </div>
         )}

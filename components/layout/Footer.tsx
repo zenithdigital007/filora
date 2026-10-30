@@ -86,32 +86,47 @@ export function Footer() {
             <ul className="space-y-2.5 text-sm">
               <li>
                 <Link href="/guides" className="text-neutral-600 hover:text-filora transition-colors">
-                  PDF Guides Hub
-                </Link>
-              </li>
-              <li>
-                <Link href="/resources/pdf-glossary" className="text-neutral-600 hover:text-filora transition-colors">
-                  PDF Glossary
-                </Link>
-              </li>
-              <li>
-                <Link href="/resources/pdf-page-size-guide" className="text-neutral-600 hover:text-filora transition-colors">
-                  Page Sizes Guide
-                </Link>
-              </li>
-              <li>
-                <Link href="/resources/pdf-security-guide" className="text-neutral-600 hover:text-filora transition-colors">
-                  Security Architecture
+                  PDF Guides Hub (20 Guides)
                 </Link>
               </li>
               <li>
                 <Link href="/blog" className="text-neutral-600 hover:text-filora transition-colors">
-                  Engineering Blog
+                  Engineering Blog (12 Articles)
+                </Link>
+              </li>
+              <li>
+                <Link href="/resources" className="text-neutral-600 hover:text-filora transition-colors">
+                  All Technical References
+                </Link>
+              </li>
+              <li>
+                <Link href="/resources/pdf-page-size-guide" className="text-neutral-600 hover:text-filora transition-colors">
+                  Page Sizes & Dimensions
+                </Link>
+              </li>
+              <li>
+                <Link href="/resources/pdf-archival-conformance-matrix" className="text-neutral-600 hover:text-filora transition-colors">
+                  PDF/A Archival Matrix
+                </Link>
+              </li>
+              <li>
+                <Link href="/resources/pdf-security-guide" className="text-neutral-600 hover:text-filora transition-colors">
+                  Security & Cipher Guide
+                </Link>
+              </li>
+              <li>
+                <Link href="/resources/prepress-print-preparation-checklist" className="text-neutral-600 hover:text-filora transition-colors">
+                  Pre-Press Print Checklist
+                </Link>
+              </li>
+              <li>
+                <Link href="/resources/pdf-glossary" className="text-neutral-600 hover:text-filora transition-colors">
+                  PDF Glossary (40+ Terms)
                 </Link>
               </li>
               <li>
                 <Link href="/resources/pdf-faq" className="text-neutral-600 hover:text-filora transition-colors">
-                  FAQ
+                  Technical FAQ
                 </Link>
               </li>
             </ul>
